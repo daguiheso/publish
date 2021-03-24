@@ -5,7 +5,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'images/[hash][ext][query]'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -54,11 +55,16 @@ module.exports = {
             ]
           }
         }]
-      }
+      },
+      {
+        test: /\.(png|gif|jpe?g|svg)$/i,
+        type: 'asset/resource',
+      },
     ]
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 4000
+    port: 4000,
+    hot: true,
   }
 }
