@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -8,6 +9,24 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'images/[hash][ext][query]'
   },
+  plugins: [new HtmlWebpackPlugin({
+    inject: false,
+    templateContent: ({ htmlWebpackPlugin }) => `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        ${htmlWebpackPlugin.tags.headTags}
+      </head>
+      <body>
+        <div id="root"></div>
+        ${htmlWebpackPlugin.tags.bodyTags}
+      </body>
+    `
+  })],
   resolve: {
     extensions: ['.js', '.jsx'],
   },
