@@ -1,0 +1,15 @@
+@import '../../scss/variables';
+
+.new-comment {
+  padding: 20px;
+  &__text-area {
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    padding: 22px 16px 8px;
+    font-size: 1rem;
+    resize: none;
+    border: 1px solid $gray-border;
+    border-radius: 4px;
+  }
+}
