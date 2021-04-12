@@ -1,5 +1,12 @@
 const rootReducer = (state, action) => {
-  return state
+  const appReducers = {
+    SET_POSTS: {
+      ...state,
+      posts: action.payload
+    }
+  }
+
+  return appReducers[action.type] || state
 }
 
 export default rootReducer
