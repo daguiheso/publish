@@ -1,0 +1,50 @@
+@import '../../scss/variables';
+
+.comment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px 6px;
+  margin: 18px 0 0;
+
+  @media (min-width: 768px) {
+    padding: 6px 20px 6px;
+  }
+
+  &__author {
+    color: $green;
+    font-weight: bold;
+    margin-right: 16px;
+  }
+
+  &__date {
+    width: 100%;
+    color: $gray_semilight;
+    font-size: .81em;
+    margin-top: 8px;
+  }
+
+  &__description {
+    font-size: .875em;
+    @media (min-width: 768px) {
+      font-size: 1em;
+    }
+  }
+
+  &__right {
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__user-image {
+    width: 50px;
+    flex-shrink: 0;
+    margin: 0;
+
+    > img {
+      width: 100%;
+    }
+  }
+}
