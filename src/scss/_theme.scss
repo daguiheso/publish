@@ -1,12 +1,32 @@
 body, html {
   font-size: $font-size-base;
   font-family: $font-family-base;
+  background: $cream;
+}
+
+figure, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }
 
 .container {
   margin: 0 auto;
   max-width: 90%;
-  @media(min-width: 992px) {
-    max-width: 1440px;
+
+  @media(min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: $focus-border;
   }
 }
