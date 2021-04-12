@@ -1,6 +1,7 @@
 import React from 'react'
+import './NewPost.scss'
 
-function NewPost() {
+function NewPost () {
   return (
     <div className="new-post">
       <div className="new-post__body">
