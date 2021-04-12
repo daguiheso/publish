@@ -3,9 +3,17 @@
 \*------------------------------------*/
 
 $white: #fff;
+$cream: #ecebeb;
 $green: #30CA72;
-$gray-light: #f4f4f4;
+
+$gray_dark: #36333C;
+$gray_normal: #67646A;
+$gray_semilight: #868588;
+$gray_light: #E0DFDF;
+$gray_extralight: #EFEFEF;
+$gray_superlight: #F6F6F6;
 $gray-border: #dfdddd;
+
 
 
 
@@ -18,3 +26,13 @@ $gray-border: #dfdddd;
 
 $font-size-base: 16px;
 $font-family-base: 'Roboto', sans-serif;
+
+
+
+
+
+/*------------------------------------*\
+  ACCESSIBILITY
+\*------------------------------------*/
+
+$focus-border: 2px solid rgb(57, 135, 207);
