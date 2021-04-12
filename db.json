@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "author": "Lorena Hernandez",
+      "created-at": "2020-10-05T14:28:00.000Z",
+      "reactions": [
+        {
+          "name": "blue",
+          "qty": 2
+        },
+        {
+          "name": "red",
+          "qty": 1
+        },
+        {
+          "name": "yellow",
+          "qty": 4
+        }
+      ],
+      "comments": [
+        {
+          "author": "Daniel H",
+          "created-at": "2020-10-05T14:48:00.000Z",
+          "description": "Lorem ipsum another night"
+        },
+        {
+          "author": "David Sotelo",
+          "created-at": "2020-10-05T11:48:00.000Z",
+          "description": "ipsum another night lorem fighter"
+        }
+      ]
+    }
+  ]
+}
