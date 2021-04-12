@@ -1,0 +1,140 @@
+@import '../../scss/variables';
+
+.post {
+  border: 1px solid $gray-border;
+  box-shadow: 2px 1px 5px 0px rgba(204,202,204,1);
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  background: $white;
+
+  &__actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > button {
+      color: $green;
+      padding: 18px 16px;
+      width: 50%;
+      border-bottom: 1px solid $gray-border;
+
+      &:first-child {
+        border-right: 1px solid $gray-border;
+      }
+    }
+
+    @media (min-width: 768px) {
+      margin-left: 50px;
+      order: 0;
+      padding: 0 20px 20px;
+      justify-content: start;
+
+      > button {
+        margin-right: 30px;
+        width: auto;
+        padding: 6px 16px;
+        border: none;
+
+        &:first-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  &__author {
+    color: $green;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  &__body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 12px;
+
+    @media (min-width: 768px) {
+      padding: 20px 20px 10px;
+    }
+  }
+
+  &__comments {
+    width: 100%;
+    background: $gray_superlight;
+    @media (min-width: 768px) {
+      order: 2;
+    }
+  }
+
+  &__comments-total {
+    color: $gray_normal;
+  }
+
+  &__date {
+    font-size: .87em;
+    color: $gray_semilight;
+  }
+
+  &__description {
+    margin: 18px 0 0;
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    border-top: 1px solid $gray-border;
+    border-bottom: 1px solid $gray-border;
+
+    @media (min-width: 768px) {
+      order: 1;
+    }
+  }
+
+  &__info {
+    padding-left: 20px;
+  }
+
+  &__user-image {
+    width: 50px;
+    flex-shrink: 0;
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__reactions {
+    display: flex;
+    align-items: center;
+
+    .reaction {
+      width: 20px;
+      height: 20px;
+      border: 2px solid $white;
+      border-radius: 50%;
+      margin-left: -7px;
+
+      &--blue {
+        background: blue;
+      }
+      &--red {
+        background: red;
+      }
+      &--yellow {
+        background: goldenrod;
+      }
+    }
+
+    .total {
+      color: $green;
+      margin-left: 16px;
+      font-weight: bold;
+    }
+  }
+}

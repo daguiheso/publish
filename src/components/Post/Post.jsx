@@ -5,6 +5,8 @@ import Accordion from '../../common/Accordion/Accordion'
 import Comment from '../Comment/Comment'
 import NewComment from '../NewComment/NewComment'
 
+import './Post.scss'
+
 function Post () {
   const [isOpenAccordion, setOpenAccordion] = useState(false)
   const toggleAccordion = () => {
