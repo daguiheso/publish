@@ -28,7 +28,7 @@ module.exports = {
     `
   })],
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx']
   },
   module: {
     rules: [
@@ -68,7 +68,7 @@ module.exports = {
           options: {
             presets: [
               ['@babel/preset-env', {
-                "targets": "defaults"
+                targets: 'defaults'
               }],
               '@babel/preset-react'
             ]
@@ -77,13 +77,13 @@ module.exports = {
       },
       {
         test: /\.(png|gif|jpe?g|svg)$/i,
-        type: 'asset/resource',
-      },
+        type: 'asset/resource'
+      }
     ]
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     port: 4000,
-    hot: true,
+    hot: true
   }
 }
