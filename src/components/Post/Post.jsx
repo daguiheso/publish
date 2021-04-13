@@ -39,7 +39,11 @@ function Post ({ author, description, comments, reactions }) {
           }
           <p className="total">13</p>
         </div>
-        <div className="post__comments-total">{ comments.length } comentarios</div>
+
+        { comments.length > 0 && <div className="post__comments-total">
+          {comments.length} comentarios
+          </div>
+        }
       </div>
 
       <div className="post__actions">
