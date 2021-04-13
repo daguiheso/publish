@@ -13,3 +13,15 @@ export function GET_POSTS () {
     }
   }
 };
+
+export function NEW_POST (data) {
+  return async dispatch => {
+    try {
+      const post = await apiRepository.newPost(data)
+      dispatch({ type: 'UPDATE_POSTS', payload: post.data })
+      return post
+    } catch (error) {
+      return error
+    }
+  }
+};

@@ -3,6 +3,10 @@ const rootReducer = (state, action) => {
     SET_POSTS: {
       ...state,
       posts: action.payload
+    },
+    UPDATE_POSTS: {
+      ...state,
+      posts: [...state.posts, action.payload]
     }
   }
 
