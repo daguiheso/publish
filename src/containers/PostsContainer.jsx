@@ -10,7 +10,7 @@ function PostsContainer ({ GET_POSTS, posts }) {
     GET_POSTS()
   }, [])
 
-  return posts.map((post, index) => <Post {...post} key={index} />)
+  return posts.map((post, index) => <Post {...post} key={index} />).reverse()
 }
 
 PostsContainer.propTypes = {
